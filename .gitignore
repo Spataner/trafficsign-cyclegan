@@ -1,0 +1,15 @@
+*.pdf
+*.log
+*.aux
+*.bbl
+*.synctex.gz
+*.out
+*.blg
+__pycache__/
+*.pyc
+*.sty
+*.snm
+*.toc
+*.nav
+/docs/colloquium/figures
+/docs/colloquium/gfx

@@ -1,0 +1,54 @@
+{
+    "image_size" : [64, 64],
+    "channel_count_x" : 3,
+    "channel_count_y" : 1,
+    "res_block_count" : 6,
+    "res_block_relu" : false,
+    "instance_norm_affine" : false,
+    "checkpoint_path" : "F:/CycleGAN/data/gtsb/output/[name]/checkpoints",
+    "description" : "German traffic signs to edge images, 64x64, available: http://benchmark.ini.rub.de",
+    "class_mode" : "none",
+    "class_count" : -1,
+
+    "training_config" :
+    {
+        "cycle_consistency_factor" : 10.0,
+        "image_buffer_size" : 50,
+        "batch_size" : 1,
+        "epoch_count" : 20,
+        "learning_rate" : 0.0002,
+        "log_frequency" : 100,
+
+        "beta1" : 0.5,
+        "beta2" : 0.999,
+
+        "domain_x_path" : "F:/CycleGAN/data/gtsb/input/training_x",
+        "domain_y_path" : "F:/CycleGAN/data/gtsb/input/training_edge",
+        "output_path" : "F:/CycleGAN/data/gtsb/output/[name]/output_training",
+        "summary_path" : "F:/CycleGAN/data/gtsb/output/[name]/summary_path",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png",
+
+        "output" : true,
+        "summary" : true,
+
+        "augment" : true,
+        "augment_size" : [70, 70],
+        "augment_flip" : false,
+
+        "class_loss_type" : ""
+    },
+
+    "test_config" : 
+    {
+        "domain_x_path" : "F:/CycleGAN/data/gtsb/input/test_x",
+        "domain_y_path" : "F:/CycleGAN/data/gtsb/input/test_edge",
+        "output_path" : "F:/CycleGAN/data/gtsb/output/[name]/output_test",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png"
+    }
+}

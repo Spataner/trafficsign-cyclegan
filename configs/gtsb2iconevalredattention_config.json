@@ -1,0 +1,60 @@
+{
+    "image_size" : [128, 128],
+    "channel_count_x" : 3,
+    "channel_count_y" : 3,
+    "res_block_count" : 9,
+    "res_block_relu" : false,
+    "instance_norm_affine" : false,
+    "checkpoint_path" : "F:/CycleGAN/data/gtsb/output/[name]/checkpoints",
+    "description" : "German traffic signs to iconography, 128x128, homogeneous backgrounds, evaluation configuration, reduced by one attention class, available: http://benchmark.ini.rub.de; https://commons.wikimedia.org/wiki/Road_signs_of_Germany",
+    "class_mode" : "none",
+    "class_count" : 43,
+    "mapping_xy_initial_filter_count" : 64,
+    "mapping_yx_initial_filter_count" : 64,
+
+    "training_config" :
+    {
+        "cycle_consistency_factor" : 10.0,
+        "image_buffer_size" : 50,
+        "batch_size" : 5,
+        "epoch_count" : 24,
+        "learning_rate" : 0.0002,
+        "log_frequency" : 100,
+
+        "beta1" : 0.5,
+        "beta2" : 0.999,
+
+        "domain_x_path" : "F:/CycleGAN/data/gtsb/input/training_x_128_cyclegan_red_attention",
+        "domain_y_path" : "F:/CycleGAN/data/gtsb/input/training_icon_128_eval_red_attention",
+        "output_path" : "F:/CycleGAN/data/gtsb/output/[name]/output_training",
+        "summary_path" : "F:/CycleGAN/data/gtsb/output/[name]/summary",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png",
+
+        "output" : true,
+        "summary" : true,
+
+        "augment" : true,
+        "augment_size" : [143, 143],
+        "augment_flip" : false,
+        "augment_random_resize" : true,
+
+        "class_loss_type" : "",
+
+        "discriminator_x_initial_filter_count" : 64,
+        "discriminator_y_initial_filter_count" : 64
+    },
+
+    "test_config" : 
+    {
+        "domain_x_path" : "F:/CycleGAN/data/gtsb/input/test_x_128",
+        "domain_y_path" : "F:/CycleGAN/data/gtsb/input/test_icon_128_hom",
+        "output_path" : "F:/CycleGAN/data/gtsb/output/[name]/output_test",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png"
+    }
+}

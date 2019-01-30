@@ -1,0 +1,60 @@
+{
+    "image_size" : [256, 256],
+    "channel_count_x" : 3,
+    "channel_count_y" : 3,
+    "res_block_count" : 9,
+    "res_block_relu" : false,
+    "instance_norm_affine" : false,
+    "checkpoint_path" : "F:/CycleGAN/data/horse2zebra/output/[name]/checkpoints",
+    "description" : "Horses to zebras (ImageNet), available: https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/",
+    "class_mode" : "none",
+    "class_count" : -1,
+    "mapping_xy_initial_filter_count" : 64,
+    "mapping_yx_initial_filter_count" : 64,
+
+    "training_config" :
+    {
+        "cycle_consistency_factor" : 10.0,
+        "image_buffer_size" : 50,
+        "batch_size" : 3,
+        "epoch_count" : 200,
+        "learning_rate" : 0.0002,
+        "log_frequency" : 100,
+
+        "beta1" : 0.5,
+        "beta2" : 0.999,
+
+        "domain_x_path" : "F:/CycleGAN/data/horse2zebra/input/training_x",
+        "domain_y_path" : "F:/CycleGAN/data/horse2zebra/input/training_y",
+        "output_path" : "F:/CycleGAN/data/horse2zebra/output/[name]/output_training",
+        "summary_path" : "F:/CycleGAN/data/horse2zebra/output/[name]/summary",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".jpg",
+        "extension_y" : ".jpg",
+
+        "output" : true,
+        "summary" : true,
+
+        "augment" : true,
+        "augment_size" : [286, 286],
+        "augment_flip" : true,
+        "augment_random_resize": true,
+
+        "class_loss_type" : "",
+        
+        "discriminator_x_initial_filter_count" : 64,
+        "discriminator_y_initial_filter_count" : 64
+    },
+
+    "test_config" : 
+    {
+        "domain_x_path" : "F:/CycleGAN/data/horse2zebra/input/test_x",
+        "domain_y_path" : "F:/CycleGAN/data/horse2zebra/input/test_y",
+        "output_path" : "F:/CycleGAN/data/horse2zebra/output/[name]/output_test",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".jpg",
+        "extension_y" : ".jpg"
+    }
+}

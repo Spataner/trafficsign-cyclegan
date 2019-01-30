@@ -1,0 +1,54 @@
+{
+    "image_size" : [256, 256],
+    "channel_count_x" : 1,
+    "channel_count_y" : 3,
+    "res_block_count" : 9,
+    "res_block_relu" : false,
+    "instance_norm_affine" : false,
+    "checkpoint_path" : "F:/CycleGAN/data/edges2shoes/output/[name]/checkpoints",
+    "description" : "Shoes to edge images (UT Zappos50K), available: https://people.eecs.berkeley.edu/~tinghuiz/projects/pix2pix/datasets/",
+    "class_mode" : "none",
+    "class_count" : -1,
+
+    "training_config" :
+    {
+        "cycle_consistency_factor" : 10.0,
+        "image_buffer_size" : 50,
+        "batch_size" : 5,
+        "epoch_count" : 6,
+        "learning_rate" : 0.0002,
+        "log_frequency" : 100,
+
+        "beta1" : 0.5,
+        "beta2" : 0.999,
+
+        "domain_x_path" : "F:/CycleGAN/data/edges2shoes/input/training_x",
+        "domain_y_path" : "F:/CycleGAN/data/edges2shoes/input/training_y",
+        "output_path" : "F:/CycleGAN/data/edges2shoes/output/[name]/output_training",
+        "summary_path" : "F:/CycleGAN/data/edges2shoes/output/[name]/summary",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png",
+
+        "output" : true,
+        "summary" : true,
+
+        "augment" : true,
+        "augment_size" : [286, 286],
+        "augment_flip" : true,
+
+        "class_loss_type" : ""
+    },
+
+    "test_config" : 
+    {
+        "domain_x_path" : "F:/CycleGAN/data/edges2shoes/input/test_x",
+        "domain_y_path" : "F:/CycleGAN/data/edges2shoes/input/test_y",
+        "output_path" : "F:/CycleGAN/data/edges2shoes/output/[name]/output_test",
+        "labels_x_path" : "",
+        "labels_y_path" : "",
+        "extension_x" : ".png",
+        "extension_y" : ".png"
+    }
+}
