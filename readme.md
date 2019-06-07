@@ -1,6 +1,6 @@
 # Introduction
 
-This is the Master thesis project by Dominic Spata under the tutelage of the Real-Time Computer Vision Research Group at the Institute of Neural Computation, Ruhr-University Bochum.
+This is the Master thesis project by Dominic Spata under the tutelage of the Real-Time Computer Vision Research Group at the Institute of Neural Computation, Ruhr University Bochum.
 
 It deals with cycle-consistent generative adversarial networks (CycleGANs), as originally developed by [Zhu et al.](https://arxiv.org/pdf/1703.10593.pdf)
 
