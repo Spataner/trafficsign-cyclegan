@@ -12,7 +12,7 @@ Dominic Spata, Daniela Horn, Sebastian Houben, "Generation of Natural Traffic Si
 @inproceedings{SpataHornHouben2019,
 	author		=	{Spata, Dominic and Horn, Daniela and Houben, Sebastian},
 	title		=	{Generation of Natural Traffic Sign Images Using Domain Translation with Cycle-Consistent Generative Adversarial Networks},
-	booktitle	=	{Proceedings of the IEEE Intelligent Vehicles Symposium (IV), accepted},
+	booktitle	=	{Proceedings of the IEEE Intelligent Vehicles Symposium (IV)},
 	year		=	{2019},
 }
 ```
