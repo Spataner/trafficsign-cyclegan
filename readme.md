@@ -64,6 +64,20 @@ The CycleGAN software supports all image formats supported by [tf.image.decode_i
 
 Class label annotations are expected to be given in form of JSON files containing a single dictionary which maps the image file name's tail (so without any directory names) to an integer indicating the instance's class.
 
-## Traffic Sign Generation
+## Traffic Sign Generation - How to get started
 
-Traffic sign generation is based on the [German Traffic Sign Recognition Benchmark](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset), the prototype images are generated from [the Wiki Commons Road Signs of Germany](https://commons.wikimedia.org/wiki/Road_signs_of_Germany). A step-by-step introduction on how to train a traffic sign generator with the components in this repository will be available soon!
+Traffic sign generation is based on the [German Traffic Sign Recognition Benchmark](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset), the prototype images are generated from [the Wiki Commons Road Signs of Germany](https://commons.wikimedia.org/wiki/Road_signs_of_Germany). To follow this section, it is assumed that you have successfully set up your environment according to section "Dependencies". Next, we are going to adapt and execute the file "code/scripts/get_started.py". We will need two external data packages for this:
+
+[Traffic sign image generator checkpoints](http://benchmark.ini.rub.de/extern_downloads/cyclegan_traffic_sign_generation.zip)
+
+[Collection of traffic sign icons](http://benchmark.ini.rub.de/extern_downloads/traffic_sign_icons_original.zip)
+
+Download both of them and extract them to your harddrive. Enter the local path of the collection of traffic sign icons in "get_started.py" at "original_icon_dataset_path". Also, enter the local path of the traffic sign image generator checkpoints in the file "configs/gtsb2icon128_get_started_config.json" at item "checkpoint_path".
+
+Now the only two things you need to do are to set the variables "dest_icon_path" for intermediate results and "dest_generated_path" for the generated traffic sign images to two (preferably different) local paths of your choosing. Then, execute "get_started.py":
+
+```
+python -m code/scripts/get_started.py
+```
+
+If everything runs smoothly, you will find the generated traffic sign images and a file with labels in the path you specified.
