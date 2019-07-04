@@ -17,6 +17,7 @@ import cyclegan.util.exceptions     as exc
 import cyclegan.model.output        as output
 import cyclegan.model.input         as input
 import cyclegan.model.operations    as ops
+import os
 
 
 EPOCH_COUNT = 1
@@ -143,6 +144,8 @@ def main(argv):
         cfg.adjust_paths(config, name, test_paths = False, training_paths = False)
 
     cfg.ensure_present(out_path)
+    if not os.path.exists(config[cfg.CHECKPOINT_PATH]):
+        raise( FileNotFoundError("Path not found: %s" % config[cfg.CHECKPOINT_PATH]) )
 
     print()
     print("Configuration description:")
@@ -207,6 +210,7 @@ def main(argv):
 
         session.run(tf.global_variables_initializer())
 
+        print("Restoring checkpoint from: %s" % config[cfg.CHECKPOINT_PATH])
         checkpoint = tf.train.get_checkpoint_state(config[cfg.CHECKPOINT_PATH])
 
         if checkpoint and checkpoint.model_checkpoint_path:             #pylint: disable = E1101
