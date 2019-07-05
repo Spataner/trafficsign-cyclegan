@@ -14,6 +14,7 @@ Dominic Spata, Daniela Horn, Sebastian Houben, "Generation of Natural Traffic Si
 	title		=	{Generation of Natural Traffic Sign Images Using Domain Translation with Cycle-Consistent Generative Adversarial Networks},
 	booktitle	=	{Proceedings of the IEEE Intelligent Vehicles Symposium (IV)},
 	year		=	{2019},
+	pages       	=   	{622--628},
 }
 ```
 
