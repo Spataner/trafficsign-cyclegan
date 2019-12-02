@@ -6,7 +6,7 @@ It deals with cycle-consistent generative adversarial networks (CycleGANs), as o
 
 The method has been used for generation of life-like traffic sign images and has been presented at the Intelligent Vehicles Symposium 2019 in Paris:
 
-Dominic Spata, Daniela Horn, Sebastian Houben, "Generation of Natural Traffic Sign Images Using Domain Translation with Cycle-Consistent Generative Adversarial Networks", accepted for publication at the Intelligent Vehicles Symposium (IV) 2019
+Dominic Spata, Daniela Horn, Sebastian Houben, "Generation of Natural Traffic Sign Images Using Domain Translation with Cycle-Consistent Generative Adversarial Networks", In: <i>Proceedings of the IEEE Intelligent Vehicles Symposium (IV)</i>, 2019, pp. 622-628.
 
 ```
 @inproceedings{SpataHornHouben2019,
